@@ -4,7 +4,7 @@ import "testing"
 
 func TestBus_Read(t *testing.T) {
 
-	memory := bus{}
+	memory := Bus{}
 	result := memory.Read(0x0)
 	expected := uint8(0x0)
 
@@ -15,7 +15,7 @@ func TestBus_Read(t *testing.T) {
 
 func TestBus_Write(t *testing.T) {
 
-	memory := bus{}
+	memory := Bus{}
 
 	// Test Work RAM
 	memory.Write(0x0, 0x1)

@@ -1,12 +1,12 @@
 package bus
 
-type bus struct {
+type Bus struct {
 	// 0x0000 - 0xFFFF
 	memory [0x10000]uint8
 }
 
 // Writes data to memory
-func (b *bus) Write(address uint16, data uint8) {
+func (b *Bus) Write(address uint16, data uint8) {
 
 	// Write Data
 	b.memory[address] = data
@@ -41,6 +41,6 @@ func (b *bus) Write(address uint16, data uint8) {
 }
 
 // Reads data from memory
-func (b *bus) Read(address uint16) uint8 {
+func (b *Bus) Read(address uint16) uint8 {
 	return b.memory[address]
 }
